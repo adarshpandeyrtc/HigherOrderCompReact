@@ -1,14 +1,20 @@
-import { checkProps } from "./components/check-props";
-import { includeUser } from "./components/include-user";
-import { UserInfoForm } from "./components/user-form";
-import { UserInfo } from "./components/user-info";
 import BuggyComponent from './components/BuggyComponent';
+import SlowComponent from "./components/SlowComponent";
+// import ToggleButtonDialog from "./components/ToogleButtonDialog";
+import DynamicScroll from './components/DynamicScroll';
+
 
 function App() {
   return (
-    <>
-      <BuggyComponent />
-    </>
+    <DynamicScroll
+      content={
+        <>
+                 <SlowComponent />
+                 <BuggyComponent />
+        </>
+      }
+      {/* <ToggleButtonDialog /> */}
+      />
   );
 }
 
